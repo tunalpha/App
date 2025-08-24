@@ -24,6 +24,10 @@
       "src": "/static/(.*)",
       "dest": "frontend/static/$1"
     },
+    {
+      "src": "/favicon.jpg",
+      "dest": "frontend/favicon.jpg"
+    },
     { "src": "/favicon-16x16.png", "dest": "frontend/favicon-16x16.png" },
 { "src": "/favicon-32x32.png", "dest": "frontend/favicon-32x32.png" },
 { "src": "/apple-touch-icon.png", "dest": "frontend/apple-touch-icon.png" },
