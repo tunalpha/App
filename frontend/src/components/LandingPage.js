@@ -357,53 +357,53 @@ const LandingPage = ({ onAuthAction }) => {
       </section>
 
       {/* Growth Guarantee Section */}
-      <section className="py-16 bg-gradient-to-br from-green-500 to-emerald-600 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <TrendingUp className="h-4 w-4" />
-              <span>{isItalian ? 'Risultati Garantiti' : 'Guaranteed Results'}</span>
-            </div>
-            
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              {isItalian 
-                ? 'I Nostri Merchant Crescono del 300%' 
-                : 'Our Merchants Grow 300%'
-              }
-            </h2>
-            
-            <p className="text-xl text-green-100 mb-8 leading-relaxed whitespace-pre-line">
-              {isItalian 
-                ? 'I nostri merchant crescono del 300% nel primo anno.\nCrescita garantita con Alpha Bit!' 
-                : 'Our merchants grow 300% in the first year.\nGuaranteed growth with Alpha Bit!'
-              }
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">300%</div>
-                <p className="text-green-100">
-                  {isItalian ? 'Crescita Media Annua' : 'Average Annual Growth'}
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">30 Giorni</div>
-                <p className="text-green-100">
-                  {isItalian ? 'Per Vedere i Risultati' : 'To See Results'}
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold mb-2">0%</div>
-                <p className="text-green-100">
-                  {isItalian ? 'Rischio per Te' : 'Risk for You'}
-                </p>
-              </div>
-            </div>
-          </div>
+<section className="py-16 bg-gradient-to-br from-green-500 to-emerald-600 text-white">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center max-w-4xl mx-auto">
+      <div className="inline-flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
+        <TrendingUp className="h-4 w-4" />
+        <span>{isItalian ? 'Risultati Garantiti' : 'Guaranteed Results'}</span>
+      </div>
+
+      <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+        {isItalian ? 'I Nostri Merchant Crescono del 300%' : 'Our Merchants Grow 300%'}
+      </h2>
+
+      <p className="text-xl text-green-100 mb-8 leading-relaxed whitespace-pre-line">
+        {isItalian
+          ? 'I nostri merchant crescono del 300% nel primo anno.\nCrescita garantita con Alpha Bit!'
+          : 'Our merchants grow 300% in the first year.\nGuaranteed growth with Alpha Bit!'}
+      </p>
+
+      <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="text-center">
+          <div className="text-4xl font-bold mb-2">300%</div>
+          <p className="text-green-100">
+            {isItalian ? 'Crescita Media Annua' : 'Average Annual Growth'}
+          </p>
         </div>
-      </section>
+
+        <div className="text-center">
+          {/* ✅ Default = 30 Days; Italian = 30 Giorni */}
+          <div className="text-4xl font-bold mb-2">
+            {isItalian ? '30 Giorni' : '30 Days'}
+          </div>
+          <p className="text-green-100">
+            {isItalian ? 'Per Vedere i Risultati' : 'To See Results'}
+          </p>
+        </div>
+
+        <div className="text-center">
+          <div className="text-4xl font-bold mb-2">0%</div>
+          <p className="text-green-100">
+            {isItalian ? 'Rischio per Te' : 'Risk for You'}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Testimonials */}
       <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100/50">
