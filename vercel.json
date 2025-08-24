@@ -24,10 +24,12 @@
       "src": "/static/(.*)",
       "dest": "frontend/static/$1"
     },
-    {
-      "src": "/favicon.ico",
-      "dest": "frontend/favicon.ico"
-    },
+    { "src": "/favicon-16x16.png", "dest": "frontend/favicon-16x16.png" },
+{ "src": "/favicon-32x32.png", "dest": "frontend/favicon-32x32.png" },
+{ "src": "/apple-touch-icon.png", "dest": "frontend/apple-touch-icon.png" },
+{ "src": "/android-chrome-192x192.png", "dest": "frontend/android-chrome-192x192.png" },
+{ "src": "/android-chrome-512x512.png", "dest": "frontend/android-chrome-512x512.png" },
+{ "src": "/alphabitpay-og.png", "dest": "frontend/alphabitpay-og.png" },
     {
       "src": "/manifest.json",
       "dest": "frontend/manifest.json"
