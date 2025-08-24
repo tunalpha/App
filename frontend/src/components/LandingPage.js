@@ -468,7 +468,7 @@ const LandingPage = ({ onAuthAction }) => {
         </div>
       </section>
 
-  <footer className="bg-gray-900 text-white py-16">
+<footer className="bg-gray-900 text-white py-16">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid md:grid-cols-4 gap-8">
       {/* Company Info */}
@@ -513,18 +513,19 @@ const LandingPage = ({ onAuthAction }) => {
     <Separator className="my-8 bg-gray-800" />
 
     <div className="flex flex-col md:flex-row justify-between items-center">
-      <div className="text-sm text-gray-400">
+      <div className="text-sm text-gray-400 text-center">
         © 2024 Alpha Bit. {isItalian ? 'Tutti i diritti riservati.' : 'All rights reserved.'}
-        {/* Added email below */}
+        {/* Email line centered and with "Email at" */}
         <div className="mt-2">
           <a href="mailto:info@alphabitpay.com" className="hover:text-white transition-colors">
-            info@alphabitpay.com
+            Email at info@alphabitpay.com
           </a>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
 
       
       {/* Review Modal */}
