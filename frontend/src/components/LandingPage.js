@@ -34,6 +34,27 @@ const LandingPage = ({ onAuthAction }) => {
   const { t, isItalian } = useLanguage();
   const [showReviewModal, setShowReviewModal] = useState(false);
 
+  // Open WhatsApp directly when possible; otherwise fall back to wa.me (and desktop web)
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    const phone = '393772411743';
+    const direct = `whatsapp://send?phone=${phone}`;
+    const web = `https://wa.me/${phone}`;
+
+    const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent || '');
+    if (isMobile) {
+      // Try the native app first
+      window.location.href = direct;
+      // If it fails (app not installed), fallback to web
+      setTimeout(() => {
+        window.location.href = web;
+      }, 700);
+    } else {
+      // Desktop: open WhatsApp Web
+      window.open(web, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <main className="flex-1">
       {/* Hero Section */}
@@ -504,12 +525,7 @@ const LandingPage = ({ onAuthAction }) => {
       {/* Support */}
       <div>
         <h3 className="font-semibold mb-4">{t('footer.links.support')}</h3>
-        <ul className="space-y-2 text-sm text-gray-400">
-          {/* Added phone number between Support heading and Contact */}
-          <li>
-            <a href="tel:+393772411743" className="hover:text-white transition-colors">+393772411743</a>
-          </li>
-          <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+        <ul className="space-y-2 text-sm text-gray-400"><li><a href="https://wa.me/393772411743" onClick={handleContactClick} className="hover:text-white transition-colors">Contact</a></li>
         </ul>
       </div>
     </div>
