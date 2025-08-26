@@ -83,7 +83,7 @@ const LandingPage = ({ onAuthAction }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button 
                 size="lg" 
-                onClick={() => onAuthAction('signup')}
+                onClick={() => { window.location.href = 'http://app.alphabitpay.com/'; }}
                 className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 {t('hero.cta')}
@@ -525,7 +525,7 @@ const LandingPage = ({ onAuthAction }) => {
       {/* Support */}
       <div>
         <h3 className="font-semibold mb-4">{t('footer.links.support')}</h3>
-        <ul className="space-y-2 text-sm text-gray-400"><li><a href="https://wa.me/393772411743" onClick={handleContactClick} className="hover:text-white transition-colors">Contact</a></li>
+        <ul className="space-y-2 text-sm text-gray-400"><li><a href="https://wa.me/393772411743" onClick={handleContactClick} className="hover:text-white transition-colors">Contact<\/a></li>
         </ul>
       </div>
     </div>
