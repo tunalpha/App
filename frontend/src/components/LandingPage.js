@@ -501,22 +501,18 @@ const LandingPage = ({ onAuthAction }) => {
         </ul>
       </div>
 
-      
       {/* Support */}
-<div>
-  <h3 className="font-semibold mb-4">{t('footer.links.support')}</h3>
-  <ul className="space-y-2 text-sm text-gray-400">
-    <li>
-      <a href="tel:+393772411743" className="hover:text-white transition-colors">
-        +393772411743
-      </a>
-    </li>
-    <li>
-      <a href="#contact" className="hover:text-white transition-colors">Contact</a>
-    </li>
-  </ul>
-</div>
-
+      <div>
+        <h3 className="font-semibold mb-4">{t('footer.links.support')}</h3>
+        <ul className="space-y-2 text-sm text-gray-400">
+          {/* Added phone number between Support heading and Contact */}
+          <li>
+            <a href="tel:+393772411743" className="hover:text-white transition-colors">+393772411743</a>
+          </li>
+          <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </div>
 
     <Separator className="my-8 bg-gray-800" />
 
@@ -535,7 +531,6 @@ const LandingPage = ({ onAuthAction }) => {
 </footer>
 
 
-      
       {/* Review Modal */}
       <ReviewModal 
         isOpen={showReviewModal} 
