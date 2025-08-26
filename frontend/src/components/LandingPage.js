@@ -501,14 +501,22 @@ const LandingPage = ({ onAuthAction }) => {
         </ul>
       </div>
 
+      
       {/* Support */}
-      <div>
-        <h3 className="font-semibold mb-4">{t('footer.links.support')}</h3>
-        <ul className="space-y-2 text-sm text-gray-400">
-          <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+<div>
+  <h3 className="font-semibold mb-4">{t('footer.links.support')}</h3>
+  <ul className="space-y-2 text-sm text-gray-400">
+    <li>
+      <a href="tel:+393772411743" className="hover:text-white transition-colors">
+        +393772411743
+      </a>
+    </li>
+    <li>
+      <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+    </li>
+  </ul>
+</div>
+
 
     <Separator className="my-8 bg-gray-800" />
 
