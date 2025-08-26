@@ -8,6 +8,28 @@ const Header = ({ onAuthAction }) => {
   const { t, currentLang, switchLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
+  const APP_URL = 'http://app.alphabitpay.com/';
+  const goToApp = () => {
+    window.location.href = APP_URL;
+  };
+
+  const handleContactClick = () => {
+    const phone = '393772411743';
+    const direct = `whatsapp://send?phone=${phone}`;
+    const web = `https://wa.me/${phone}`;
+    const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent || '');
+
+    if (isMobile) {
+      window.location.href = direct;
+      setTimeout(() => {
+        window.location.href = web;
+      }, 700);
+    } else {
+      window.open(web, '_blank', 'noopener,noreferrer');
+    }
+    setIsOpen(false);
+  };
+
   const navItems = [
     { key: 'home', href: '#home' },
     { key: 'features', href: '#features' },
@@ -42,7 +64,11 @@ const Header = ({ onAuthAction }) => {
             {navItems.map((item) => (
               <button
                 key={item.key}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() =>
+                  item.key === 'contact'
+                    ? handleContactClick()
+                    : scrollToSection(item.href)
+                }
                 className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
               >
                 {t(`nav.${item.key}`)}
@@ -79,13 +105,13 @@ const Header = ({ onAuthAction }) => {
             
             <Button 
               variant="ghost" 
-              onClick={() => onAuthAction('login')}
+              onClick={goToApp}
               className="text-gray-600 hover:text-gray-900"
             >
               {t('nav.login')}
             </Button>
             <Button 
-              onClick={() => onAuthAction('signup')}
+              onClick={goToApp}
               className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white shadow-lg"
             >
               {t('nav.signup')}
@@ -130,7 +156,11 @@ const Header = ({ onAuthAction }) => {
                   {navItems.map((item) => (
                     <button
                       key={item.key}
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={() =>
+                        item.key === 'contact'
+                          ? handleContactClick()
+                          : scrollToSection(item.href)
+                      }
                       className="text-left text-gray-600 hover:text-gray-900 transition-colors font-medium py-2"
                     >
                       {t(`nav.${item.key}`)}
@@ -143,7 +173,7 @@ const Header = ({ onAuthAction }) => {
                   <Button 
                     variant="outline" 
                     onClick={() => {
-                      onAuthAction('login');
+                      goToApp();
                       setIsOpen(false);
                     }}
                     className="w-full"
@@ -152,7 +182,7 @@ const Header = ({ onAuthAction }) => {
                   </Button>
                   <Button 
                     onClick={() => {
-                      onAuthAction('signup');
+                      goToApp();
                       setIsOpen(false);
                     }}
                     className="w-full bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white shadow-lg"
