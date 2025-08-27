@@ -8,9 +8,13 @@ const Header = ({ onAuthAction }) => {
   const { t, currentLang, switchLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
-  const APP_URL = 'http://app.alphabitpay.com/';
+  const APP_URL = 'https://app.alphabitpay.com/';
+  const SIGNUP_URL = 'https://app.alphabitpay.com/signup';
   const goToApp = () => {
     window.location.href = APP_URL;
+  };
+  const goToSignup = () => {
+    window.location.href = SIGNUP_URL;
   };
 
   const handleContactClick = () => {
@@ -111,7 +115,7 @@ const Header = ({ onAuthAction }) => {
               {t('nav.login')}
             </Button>
             <Button 
-              onClick={goToApp}
+              onClick={goToSignup}
               className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white shadow-lg"
             >
               {t('nav.signup')}
@@ -182,7 +186,7 @@ const Header = ({ onAuthAction }) => {
                   </Button>
                   <Button 
                     onClick={() => {
-                      goToApp();
+                      goToSignup();
                       setIsOpen(false);
                     }}
                     className="w-full bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white shadow-lg"
