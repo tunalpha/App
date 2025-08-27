@@ -83,7 +83,7 @@ const LandingPage = ({ onAuthAction }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button 
                 size="lg" 
-                onClick={() => { window.location.href = 'http://app.alphabitpay.com/'; }}
+                onClick={() => { window.location.href = 'https://app.alphabitpay.com/signup'; }}
                 className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 {t('hero.cta')}
